@@ -1,7 +1,44 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  var car = Car(2);
+  car.carType();
+  car.wheelsNum();
+
+  var plane = Plane(8);
+  plane.carType();
+  plane.wheelsNum();
   runApp(const MyApp());
+}
+
+abstract class Vehical {
+  Vehical(this.wheels);
+  int wheels;
+  void wheelsNum();
+}
+
+class Car extends Vehical {
+  Car(super.wheels);
+  void carType() {
+    print("land runner");
+  }
+
+  @override
+  void wheelsNum() {
+    print("The  car's wheels number is $wheels");
+  }
+}
+
+class Plane extends Vehical {
+  Plane(super.wheels);
+  void carType() {
+    print("land runner");
+  }
+
+  @override
+  void wheelsNum() {
+    print("The  Plane's wheels number is $wheels");
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -11,9 +48,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: .fromSeed(
-          seedColor: const Color.fromARGB(255, 73, 19, 165),
-        ),
+        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 0, 0, 0)),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page......'),
     );
