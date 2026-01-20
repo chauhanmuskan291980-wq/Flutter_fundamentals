@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
+import '../screens/home_screen.dart'; // Add the correct import path for HomeScreen
 
 class BottonNavBar extends StatefulWidget {
   const BottonNavBar({super.key});
@@ -10,17 +11,17 @@ class BottonNavBar extends StatefulWidget {
 
 class _BottonNavBarState extends State<BottonNavBar> {
   final appScreen = [
-    Center(child: const Text("Home")),
-    Center(child: const Text("Search")),
-    Center(child: const Text("Tickets")),
-    Center(child: const Text("Profile")),
+    const HomeScreen(),
+    const Center(child: Text("Search")),
+    const Center(child: Text("Tickets")),
+    const Center(child: Text("Profile")),
   ];
 
   //change oue index for bottom nav bar
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
-       _selectedIndex = index;
+      _selectedIndex = index;
     });
     print("Tapped index is $_selectedIndex");
   }
