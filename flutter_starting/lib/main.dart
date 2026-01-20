@@ -1,3 +1,4 @@
+import './base/botton_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,19 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.amberAccent,
-          title:const Text("Flutter title"),
-        ),
-        body:const Center(child:Text("Hello Flutter"))  
-      )
+      home:  BottonNavBar(),
     );
   }
 }
-
-
-
-
- 
- 
